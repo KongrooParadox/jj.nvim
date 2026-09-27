@@ -1374,6 +1374,7 @@ function M.j(args)
 			if #remaining_args == 0 then
 				M.edit()
 			else
+				table.insert(cmd, 1, "jj")
 				terminal.run(cmd)
 			end
 		end,
@@ -1500,6 +1501,7 @@ function M.j(args)
 			elseif remaining_args[1] == "track" or remaining_args[1] == "t" then
 				M.bookmark_track()
 			else
+				table.insert(cmd, 1, "jj")
 				terminal.run(cmd)
 			end
 		end,
